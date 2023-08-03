@@ -33,8 +33,8 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://django-server-production-ed19.up.railway.app/',
-    'http://django-server-production-ed19.up.railway.app/',
+    'https://django-server-production-ed19.up.railway.app',
+    'http://django-server-production-ed19.up.railway.app',
 ]
 
 # FORM SUBMISSION

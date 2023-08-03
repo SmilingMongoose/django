@@ -1,12 +1,7 @@
 Enter your name and it will show up below the form:
 <br>
-<!-- <form>
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit name">
-</form> -->
 
-<form method="POST">
+<form action="/" method="POST">
     {% csrf_token %}
     <input type="text" name="visitor_input">
     <button type="submit">Submit</button>

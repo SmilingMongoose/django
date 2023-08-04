@@ -1,0 +1,22 @@
+Enter the ticker to view data:
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="ticker_input">
+    <button type="submit">Submit</button>
+</form>
+
+API data:<br>
+{{ entered_ticker }}<br>
+{% for entry_open in data_open_close %}
+    date: {{ entry_open.0 }} - open: {{ entry_open.1 }} - close: {{ entry_open.2 }}  <br>
+{% endfor %}
+
+<!-- {{ api_res }} -->
+
+<!-- {% if api_res|length >= 1 %}
+    {% for day in api_res %}
+        {{ day }} 
+        <br>
+    {% endfor %}
+{% endif %}
+ -->

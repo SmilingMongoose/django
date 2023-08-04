@@ -9,7 +9,7 @@ def index(request):
     if input_text == None:
         input_text = ''
     else:
-        input_text = request.POST.get('visitor_input')
+        input_text = request.POST.get('visitor_input', "you didn't enter anything")
     
     visitors = Visitor.objects.all()
 

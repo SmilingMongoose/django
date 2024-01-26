@@ -1,7 +1,8 @@
 from django.test import TestCase
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, patch, call
 from . import views
 import requests
+from django.urls import reverse
 
 # unit test
 class InputTestCase(TestCase):
@@ -15,7 +16,8 @@ class InputTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name='index.html')
 
-# integration test
+
+# integration test that uses a mock object
 class InputAndAPITestCase(TestCase):
     @patch('main_app.views.requests')
     def test_input_and_api(self, mock_requests):
